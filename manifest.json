@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "UET LMS DMC",
+  "version": "1.0.0",
+  "description": "Displays semester-wise SGPA and CGPA on UET LMS grade page with PDF export.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "uet-dmc@firefox",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": []
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://lms.uet.edu.pk/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon128.png"
+  }
+}
